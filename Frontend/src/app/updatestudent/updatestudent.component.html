@@ -1,0 +1,52 @@
+
+<div class='card'>
+    <form #userform = "ngForm" (ngSubmit)="editStudent()">
+<div class='card-header'>
+ UPDATE STUDENT DETAILS
+</div>
+<div class='card-body'>            
+  
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" name="s_name" class="form-control" [(ngModel)]="studentItem.name"  required/> <br>               
+  </div>
+  <div class="form-group"> 
+    <label>Email</label>
+    <input type="text" name="s_email" class="form-control" [(ngModel)]="studentItem.email"  required/> <br>                
+  </div>
+  <div class="form-group">
+    <label>Highest Qualification</label>
+    <input type="text" name="s_highestqualification" class="form-control" [(ngModel)]="studentItem.highestqualification" required/><br>
+
+  </div>
+  <div class="form-group">
+    <label>Pass Out Year</label>
+    <input type="number" name="s_passoutyear" class="form-control" [(ngModel)]="studentItem.passoutyear"  required/><br>
+    
+  </div>
+  <div class="form-group">
+      <label>Skill Set</label>
+      <input type="text" name="s_skillset" class="form-control" [(ngModel)]="studentItem.skillset"  required/><br>
+      
+    </div>
+    <div class="form-group">
+      <label>Course</label>
+      <input type="text" name="s_course" class="form-control" [(ngModel)]="studentItem.course"  required/><br>
+      
+    </div>
+
+
+
+
+  <div class="form-group">
+    <label>Image</label>
+<input type="text" name="s_imageUrl" class="form-control" [(ngModel)]="studentItem.imageUrl" required/><br>
+
+  </div>
+  <button [disabled]="userform.form.invalid">Submit</button>
+                
+
+</div>
+</form>
+</div>
+
